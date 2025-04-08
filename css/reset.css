@@ -1,0 +1,61 @@
+/* Reset and base styles */
+@font-face {
+  font-family: "Gilory";
+  src: url("../Gilroy/Gilroy-ExtraBold.otf") format("opentype");
+  font-weight: 700; /* ExtraBold обычно 800 */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilory";
+  src: url("../Gilroy/Gilroy-Light.otf") format("opentype");
+  font-weight: 400; /* Light обычно 300 */
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Gilory", sans-serif;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: #1f1d2b;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
