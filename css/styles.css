@@ -566,106 +566,16 @@
 
 .team__header {
   text-align: center;
-  margin-bottom: 40px;
-}
-
-/* .team__slider {
   display: flex;
+  flex-direction: column;
   gap: 16px;
-  padding: 10px 0;
 }
 
-.team-card {
-  display: inline-grid;
-  border-radius: var(--border-radius-md);
-  overflow: hidden;
-  width: 542px;
-  height: 560px;
-  position: relative;
-}
-
-.team-card__img {
-  position: absolute;
-  width: 460px;
-  top: 23px;
-  left: 200px;
-  object-fit: cover;
-}
-
-.team-card__content {
-  padding: 40px;
-  position: absolute;
-  width: 542px;
-  height: 309px;
-  top: 256px;
-  left: 0;
-  background: linear-gradient(180deg, rgba(64, 71, 124, 0) 0%, rgba(64, 71, 124, 1) 100%);
-}
-
-.team-card__name {
-  font-size: 32px;
-  font-weight: 800;
-  line-height: 40px;
-  color: var(--text-color);
-  margin-bottom: 4px;
-}
-
-.team-card__position {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  color: var(--text-color);
-  margin-bottom: 16px;
-}
-
-.team-card__bio {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  color: var(--text-color);
-  margin-bottom: 20px;
-}
-
-.team-card__companies {
+.team__content {
   display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
+  flex-direction: column;
+  gap: 40px;
 }
-
-.company-tag {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2px 12px;
-  border-radius: 30px;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  color: var(--text-color);
-  background-color: var(--primary-color);
-  margin-bottom: 4px;
-}
-
-.team__dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 20px;
-}
-
-.team__dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: var(--secondary-color);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.team__dot.active {
-  background-color: var(--primary-color);
-  transform: scale(1.2);
-} */
 
 .div-2 {
   display: flex;
@@ -881,10 +791,7 @@
 
 .dashboard__img {
   position: absolute;
-  width: 699px;
-  height: 428px;
-  top: 29px;
-  left: 16px;
+  padding: 18px;
   object-fit: cover;
 }
 
@@ -1549,10 +1456,6 @@
   .device-title {
     align-items: center;
   }
-  .device-title,
-  .section-subtitle {
-    width: 288px;
-  }
 
   .app-showcase__device {
     align-items: center;
@@ -1570,14 +1473,14 @@
   }
   .dashboard__img {
     position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: fit-content;
     padding: 8px;
   }
   .width-fitcontent {
     width: 100%;
+  }
+
+  .team__header {
+    gap: 8px;
   }
 }
 
