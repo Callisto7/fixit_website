@@ -49,9 +49,39 @@ button, input, select, textarea {
 button {
   cursor: pointer;
 }
-
-ul, ol {
+.nav__list li {
   list-style: none;
+}
+ol.custom-counter {
+  counter-reset: item;
+  padding-left: 2.0rem;
+  list-style-type: none;
+}
+
+ol.custom-counter > li {
+  counter-increment: item;
+  margin-bottom: 1em;
+  position: relative;
+  padding-left: 2em;
+}
+
+ol.custom-counter > li:before {
+  content: counters(item, ".") ".";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+ol.custom-counter ol {
+  counter-reset: item;
+  padding-left: 2em;
+}
+
+ol.custom-counter ol > li:before {
+  content: counters(item, ".") " ";
+}
+.custom-counter a {
+  font-size: 16px;
 }
 
 img {

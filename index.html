@@ -43,13 +43,18 @@
             </nav>
 
             <div class="header__actions">
-              <button class="btn btn--secondary">Попробовать</button>
+              <button class="btn btn--secondary">
+                <a href="https://t.me/fixitmp_bot" target="_blank"
+                  >Попробовать</a
+                >
+              </button>
               <div class="user-profile">
-                <img
-                  src="./img/tg-icon.svg"
-                  alt="User Profile"
-                  class="user-profile__pic"
-                />
+                <a href="https://t.me/sellerscan_support" target="_blank">
+                  <img
+                    src="./img/tg-icon.svg"
+                    alt="User Profile"
+                    class="user-profile__pic"
+                /></a>
               </div>
             </div>
           </div>
@@ -71,9 +76,12 @@
                 </p>
               </div>
               <div class="value-prop__actions">
-                <button class="btn btn--primary">
-                  Подключить за 100₽ в день
-                </button>
+                <a href="https://t.me/fixitmp_bot" target="_blank"
+                  ><button class="btn btn--primary">
+                    Подключить за 100₽ в день
+                  </button></a
+                >
+
                 <p class="value-prop__note">
                   Ежедневный риск–менеджмент. Узнайте, где вы теряете деньги,
                   прямо сейчас!
@@ -91,6 +99,15 @@
                 alt="Product Showcase"
                 class="value-prop__img"
               />
+              <video
+                class="portfolio-item__video"
+                width="100%"
+                playsinline
+                style="display: none"
+              >
+                <source src="./video/glav_slider.mp4" type="video/mp4" />
+                Ваш браузер не поддерживает видео.
+              </video>
             </div>
           </div>
 
@@ -103,7 +120,10 @@
                     Попробуйте за 10 рублей. Откроем доступ на 10 дней.
                   </p>
                 </div>
-                <a href="#" class="value-card__link"
+                <a
+                  href="https://t.me/fixitmp_bot"
+                  class="value-card__link"
+                  target="_blank"
                   >Попробовать <span class="arrow-icon"></span
                 ></a>
               </div>
@@ -187,7 +207,8 @@
         <div class="container">
           <div class="portfolio__header">
             <h2 class="section-title">
-              Fixit показывает, где вы теряете прибыль
+              Каждый день вы теряете деньги. <br />
+              Fixit покажет, где именно
             </h2>
             <div class="portfolio__slider" id="portfolioSlider">
               <div class="portfolio-item">
@@ -272,13 +293,21 @@
                     alt="Portfolio Image 4"
                     class="portfolio-item__img"
                   />
+                  <!-- <video
+                    class="portfolio-item__video"
+                    width="100%"
+                    playsinline
+                    style="display: none"
+                  >
+                    <source src="./video/2.mp4" type="video/mp4" />
+                    Ваш браузер не поддерживает видео.
+                  </video> -->
                 </div>
                 <p class="portfolio-item__description">
                   Сервис предупреждает о перетарке склада и поможет разморозить
                   оборотные средства.
                 </p>
               </div>
-
               <div class="portfolio-item">
                 <div class="portfolio-item__image">
                   <button class="button-play" aria-label="Play">
@@ -298,7 +327,6 @@
               </div>
             </div>
           </div>
-
           <div class="portfolio__dots" id="portfolioDots"></div>
         </div>
         <div class="glow-effect glow-effect--6"></div>
@@ -321,12 +349,10 @@
           <img src="./img/pic.svg" />
         </div>
       </section>
-
       <section class="cases" id="cases">
         <div class="container">
           <div class="cases__header">
             <h2 class="section-title">Кейсы наших клиентов</h2>
-
             <div class="cases__slider" id="casesSlider">
               <div class="case-card">
                 <div class="case-card__header">
@@ -341,21 +367,18 @@
                 </div>
                 <div class="case-card__body">
                   <p class="case-card__period">3 месяца с Fixit:</p>
-
                   <div class="case-card__result">
                     <h4 class="case-card__metric">&gt;1 млн руб</h4>
                     <p class="case-card__description">
                       Разморозили оборотные средства, оптимизировав склад.
                     </p>
                   </div>
-
                   <div class="case-card__result">
                     <h4 class="case-card__metric">в 4 раза</h4>
                     <p class="case-card__description">
                       Ускорилась оборачиваемость
                     </p>
                   </div>
-
                   <div class="case-card__result">
                     <h4 class="case-card__metric">-42%</h4>
                     <p class="case-card__description">
@@ -364,7 +387,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="case-card">
                 <div class="case-card__header">
                   <div class="case-card__tags">
@@ -378,7 +400,6 @@
                 </div>
                 <div class="case-card__body">
                   <p class="case-card__period">2 месяца с Fixit:</p>
-
                   <div class="case-card__result">
                     <h4 class="case-card__metric">-30%</h4>
                     <p class="case-card__description">
@@ -386,19 +407,16 @@
                       товара
                     </p>
                   </div>
-
                   <div class="case-card__result">
                     <h4 class="case-card__metric">+19%</h4>
                     <p class="case-card__description">К локальным продажам</p>
                   </div>
-
                   <div class="case-card__result">
                     <h4 class="case-card__metric">-27%</h4>
                     <p class="case-card__description">Неликвидного товара</p>
                   </div>
                 </div>
               </div>
-
               <div class="case-card">
                 <div class="case-card__header">
                   <div class="case-card__tags">
@@ -498,14 +516,16 @@
                   <div class="frame-28">
                     <div class="frame-3">
                       <h3 class="text-wrapper">Вадим Панасюк</h3>
-                      <p class="title-7 fw-bold">Бизнес-аналитик с опытом 15+ лет</p>
+                      <p class="title-7 fw-bold">
+                        Бизнес-аналитик с опытом 15+ лет
+                      </p>
                     </div>
                     <p class="text-wrapper-3">
                       С 2011 года – ведущий аналитик в инвестпроектах, работал с
                       лидерами рынка РФ. С 20ХХ года руководит одной из
                       крупнейших команд разработчиков BI.
                     </p>
-                    <div class="frame-26">
+                    <div class="frame-26 fw-bold">
                       <div class="frame-29">
                         <span class="text-wrapper-4">ВТБ</span>
                       </div>
@@ -544,9 +564,11 @@
               <p class="dashboard__description">
                 Ключевые показатели в 1 файле. 15 минут в день вместо 2-4 часов.
               </p>
-              <button class="btn btn--primary width-fitcontent">
-                Попробовать за 10₽
-              </button>
+              <a href="https://t.me/fixitmp_bot" target="_blank">
+                <button class="btn btn--primary width-fitcontent">
+                  Попробовать за 10₽
+                </button></a
+              >
             </div>
           </div>
         </div>
@@ -592,7 +614,10 @@
 
               <div class="comparison-card">
                 <div class="comparison-card__number"></div>
-                <h3 class="comparison-card__title">Excel <br /> и Google таблицы</h3>
+                <h3 class="comparison-card__title">
+                  Excel <br />
+                  и Google таблицы
+                </h3>
                 <p class="comparison-card__description">
                   С таблицами селлер занимается цифрами, а не продажами. Таблицы
                   - это анализ истории, а нужно предвидеть будущее. Пока селлер
@@ -683,16 +708,18 @@
                   ваши вопросы
                 </p>
               </div>
-              <button class="btn btn--primary width-fitcontent">
-                Подписаться
-              </button>
+              <a href="https://t.me/fixitmp_bot" target="_blank"
+                ><button class="btn btn--primary width-fitcontent">
+                  Подписаться
+                </button></a
+              >
             </div>
+          </div>
+          <div class="cta__background">
+            <img src="./img/pic.svg" />
           </div>
         </div>
         <div class="glow-effect glow-effect--10"></div>
-        <div class="cta__background">
-          <img src="./img/pic.svg" />
-        </div>
       </section>
 
       <footer class="footer">
@@ -705,20 +732,26 @@
 
             <div class="footer__info">
               <p class="footer__text">
-                АО «Селлерскан» <br />
-                г. Москва, 119002, б-р Смоленский, д. 24, стр. 2, пом. 8/3/1<br />
-                <a href="mailto:info@sellerscan.ru" class="footer__link"
-                  >info@sellerscan.ru</a
+                ООО «ВИЗУАТОРС» <br />
+                109428, Россия, г. Москва, Рязанский проспект, <br />
+                дом 10, строение 18, этаж 8, офис №8.3/848<br />
+                <a href="mailto:info@vizuators.com" class="footer__link"
+                  >info@vizuators.com</a
                 >
               </p>
             </div>
 
             <div class="footer__links">
-              <a href="#" class="footer__link">Политика конфиденциальности</a
+              <a href="#" class="footer__link" target="_blank"
+                >Политика конфиденциальности</a
               ><br />
-              <a href="#" class="footer__link">Договор оферты</a>
+              <a href="offer.html" class="footer__link" target="_blank"
+                >Договор оферты</a
+              >
               <br />
-              <a href="#" class="footer__link">Получение заказа</a>
+              <a href="#" class="footer__link" target="_blank"
+                >Получение заказа</a
+              >
             </div>
           </div>
         </div>
