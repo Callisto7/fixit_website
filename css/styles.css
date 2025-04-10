@@ -9,8 +9,8 @@
   --gradient-tag: linear-gradient(90deg, #ed3ccb, #7b1cf7);
   --text-color: #ffffff;
   --text-secondary: #dedede;
-  --container-width: 1100px;
-  --container-padding: 20px;
+  --container-width: 1140px;
+  --container-padding: 15px;
   --border-radius-sm: 12px;
   --border-radius-md: 24px;
   --border-radius-lg: 36px;
@@ -242,6 +242,10 @@
   color: var(--text-color);
 }
 
+.fw-bold {
+  font-weight: 700;
+}
+
 .section-subtitle--center {
   text-align: center;
 }
@@ -322,6 +326,11 @@
   transform: rotate(-10.8deg);
   position: absolute;
   filter: blur(100px);
+}
+
+.fz-xxl {
+  line-height: 56px;
+  font-size: 48px;
 }
 
 .glow-effect--3 {
@@ -560,7 +569,7 @@
 
 /* Team section */
 .team {
-  padding: 80px 0;
+  padding: 0 0 180px;
   position: relative;
 }
 
@@ -598,23 +607,29 @@
 
 .overlap-group-6 {
   position: relative;
-  width: 542px;
   height: 566px;
   top: -23px;
 }
 
 .image-7 {
   position: absolute;
-  width: 460px;
-  top: 23px;
-  left: 200px;
+  top: 60px;
+  right: -130px;
+  object-fit: cover;
+}
+
+.image-8 {
+  position: absolute;
+  height: 542px;
+  top: 30px;
+  right: -140px;
   object-fit: cover;
 }
 
 .rectangle-4 {
   position: absolute;
-  width: 542px;
-  height: 309px;
+  width: 100%;
+  height: 100%;
   top: 256px;
   left: 0;
   background: linear-gradient(
@@ -669,23 +684,14 @@
 
 .overlap-11 {
   position: relative;
-  width: 542px;
   height: 548px;
   top: -6px;
 }
 
-.image-8 {
-  position: absolute;
-  height: 542px;
-  top: 6px;
-  left: 216px;
-  object-fit: cover;
-}
-
 .rectangle-5 {
   position: absolute;
-  width: 541px;
-  height: 318px;
+  width: 100%;
+  height: 100%;
   top: 230px;
   left: 0;
   background: linear-gradient(
@@ -693,6 +699,10 @@
     rgba(64, 71, 124, 0) 0%,
     rgba(64, 71, 124, 1) 100%
   );
+}
+
+.text-wrapper {
+  font-size: 32px;
 }
 .frame-28 {
   display: flex;
@@ -952,7 +962,11 @@
   border-radius: 24px;
   position: absolute;
   overflow: hidden;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
 .value-card__img {
@@ -1084,7 +1098,7 @@
 
 /* Comparison section */
 .comparison {
-  padding: 180px 0;
+  padding: 180px 0 80px;
   position: relative;
 }
 
@@ -1406,6 +1420,8 @@
   }
   .problem-card__title {
     width: 100%;
+    font-size: 24px;
+    max-width: 248px;
   }
   .section-title--center {
     text-align: left;
@@ -1418,7 +1434,7 @@
     left: 0;
   }
   .case-card {
-    flex: 0 0 356px;
+    flex: 0 0 300px;
   }
 
   .hero {
@@ -1462,7 +1478,7 @@
   }
 
   .dashboard {
-    height: 620px;
+    height: 580px;
   }
   .dashboard__image {
     width: 100%;
@@ -1477,10 +1493,132 @@
   }
   .width-fitcontent {
     width: 100%;
+    margin-bottom: 58px;
   }
 
   .team__header {
     gap: 8px;
+  }
+
+  .case-card__header {
+    padding: 20px;
+  }
+
+  .comparison {
+    padding: 60px 0 30px;
+  }
+
+  .app-showcase,
+  .problems,
+  .portfolio,
+  .cases,
+  .team,
+  .dashboard {
+    padding: 30px 0;
+  }
+  .value-prop__text,
+  .value-card,
+  .problem-card,
+  .comparison-card {
+    padding: 20px;
+  }
+  .value-card__content {
+    max-width: 240px;
+  }
+  .value-card__description {
+    max-width: 250px;
+  }
+  .section-title {
+    font-size: 24px;
+  }
+  .portfolio__header,
+  .cases__header,
+  .comparison__header,
+  .problems__header {
+    gap: 24px;
+  }
+
+  .case-card__body {
+    padding: 50px 20px 20px;
+  }
+
+  .div-2 {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .person {
+    flex: 1 1 100%;
+    height: auto;
+    border-radius: 24px;
+    overflow: hidden;
+    color: white;
+  }
+
+  .overlap-group-6,
+  .overlap-11 {
+    position: relative;
+    height: auto;
+    top: 0;
+  }
+
+  .image-7,
+  .image-8 {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-radius: 0 0 24px 24px;
+  }
+
+  .rectangle-4,
+  .rectangle-5 {
+    display: none;
+  }
+
+  .frame-25,
+  .frame-28 {
+    position: static;
+    padding: 20px 16px 24px;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .text-wrapper {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .title-7 {
+    font-size: 16px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .text-wrapper-3 {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .frame-26 {
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .frame-27,
+  .frame-29 {
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background-color: #f91155;
+    color: white;
+    white-space: nowrap;
+  }
+
+  .text-wrapper-4 {
+    line-height: 1;
+  }
+  .person--1 {
+    margin-bottom: 32px;
   }
 }
 

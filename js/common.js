@@ -20,3 +20,16 @@ setInterval(() => {
     rotatingText.classList.remove("hidden");
   }, 500);
 }, 3000);
+
+// document.querySelectorAll(".portfolio-item").forEach((item) => {
+//   const button = item.querySelector(".button-play");
+//   const img = item.querySelector(".portfolio-item__img");
+//   const video = item.querySelector(".portfolio-item__video");
+
+//   button.addEventListener("click", () => {
+//     button.style.display = "none";
+//     img.style.display = "none";
+//     video.style.display = "block";
+//     video.play();
+//   });
+// });
