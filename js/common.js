@@ -20,3 +20,25 @@ setInterval(() => {
     rotatingText.classList.remove("hidden");
   }, 500);
 }, 3000);
+
+let hasShownModal = false;
+
+function showModal() {
+  document.querySelector(".overlay").classList.remove("hidden");
+}
+
+function handleMouseLeave(event) {
+  if (event.clientY < 0 && !hasShownModal) {
+    hasShownModal = true;
+    showModal();
+  }
+}
+
+document.addEventListener("mouseout", handleMouseLeave);
+
+// Закрытие модалки по кнопке или клику вне её
+document.querySelector('.overlay').addEventListener('click', function (e) {
+    if (e.target === this) {
+        this.classList.add('hidden');
+    }
+});
