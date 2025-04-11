@@ -1177,6 +1177,9 @@
   background-size: contain;
   padding: 12px;
   top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .device-frame__screen {
@@ -1620,6 +1623,11 @@
   .person--1 {
     margin-bottom: 32px;
   }
+
+  .signature {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .rotating-text {
@@ -1637,4 +1645,21 @@
 .title-center {
   text-align: center;
   margin-bottom: 18px;
+}
+
+.signature {
+  margin-top: 50px;
+  text-align: right;
+  display: flex;
+  gap: 30px;
+}
+.stamp {
+  margin-top: 30px;
+}
+
+.info_text_page {
+  font-size: 17px;
+  line-height: 23px;
+  margin-top: 15px;
+  overflow: hidden;
 }
