@@ -1862,6 +1862,6 @@
   border-radius: 4px;
   padding: 4px;
 }
-.hidden {
+.hidden-modal {
   display: none !important;
 }

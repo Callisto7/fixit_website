@@ -24,7 +24,7 @@ setInterval(() => {
 let hasShownModal = false;
 
 function showModal() {
-  document.querySelector(".overlay").classList.remove("hidden");
+  document.querySelector(".overlay").classList.remove("hidden-modal");
 }
 
 function handleMouseLeave(event) {
@@ -39,6 +39,6 @@ document.addEventListener("mouseout", handleMouseLeave);
 // Закрытие модалки по кнопке или клику вне её
 document.querySelector('.overlay').addEventListener('click', function (e) {
     if (e.target === this) {
-        this.classList.add('hidden');
+        this.classList.add('hidden-modal');
     }
 });
