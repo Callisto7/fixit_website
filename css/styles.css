@@ -1377,6 +1377,21 @@
 }
 
 @media (max-width: 992px) {
+  .overlap-hidden {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    max-height: 320px;
+  }
+  .image-7 {
+    right: 0;
+    top: 30px;
+  }
+
+  .image-8 {
+    right: -50px;
+    top: 0;
+  }
   .container {
     max-width: 720px;
   }
@@ -1544,6 +1559,9 @@
 
   .team__header {
     gap: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .case-card__header {
@@ -1576,6 +1594,16 @@
   }
   .section-title {
     font-size: 24px;
+    line-height: normal;
+    max-width: 240px;
+  }
+  #cases {
+    padding: 80px 0 30px;
+  }
+
+  .glow-effect--2 {
+    border-radius: 0;
+    transform: none;
   }
   .portfolio__header,
   .cases__header,
@@ -1606,11 +1634,14 @@
     position: relative;
     height: auto;
     top: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
   }
 
   .image-7,
   .image-8 {
-    position: static;
+    position: relative;
     width: 100%;
     height: auto;
     border-radius: 0 0 24px 24px;
@@ -1667,6 +1698,13 @@
   .signature {
     flex-direction: column;
     align-items: center;
+  }
+
+  .glow-effect-dashboard {
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
+    transform: rotate(0);
   }
 }
 
