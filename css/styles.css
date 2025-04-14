@@ -19,7 +19,7 @@
 /* Container */
 .container {
   width: 100%;
-  max-width: var(--container-width);
+  max-width: clamp(320px, 90vw, 1200px);
   margin: 0 auto;
   padding: 0 var(--container-padding);
 }
@@ -225,9 +225,9 @@
 
 /* Section title */
 .section-title {
-  font-size: 32px;
+  font-size: clamp(20px, 5vw, 32px);
+  line-height: clamp(28px, 6vw, 40px);
   font-weight: 800;
-  line-height: 40px;
   color: var(--text-color);
 }
 
@@ -763,7 +763,7 @@
 }
 
 .dashboard__text {
-  flex: 0 0 356px;
+  flex: 0 0 270px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -872,9 +872,6 @@
 
 .value-prop__image {
   flex: 0 0 356px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 440px;
   border-radius: var(--border-radius-md);
   overflow: hidden;
@@ -1177,6 +1174,9 @@
   background-size: contain;
   padding: 12px;
   top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .device-frame__screen {
@@ -1189,6 +1189,9 @@
 .app-showcase__device {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
 }
 
 /* CTA section */
@@ -1197,6 +1200,7 @@
   padding: 80px 0;
   position: relative;
   height: 500px;
+  z-index: 1;
 }
 
 .cta__content {
@@ -1204,7 +1208,7 @@
 }
 
 .cta__text {
-  max-width: 543px;
+  max-width: 504px;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -1310,28 +1314,96 @@
   .value-card--wide {
     flex: 0 0 600px;
   }
-
-  .dashboard__content {
-    flex-direction: column;
-  }
-
-  .dashboard__text {
-    flex: 0 0 auto;
-    width: 100%;
-  }
   .cases__slider {
     overflow-x: auto;
   }
   .problems__grid {
     grid-template-columns: 1fr;
   }
+  .value-card__content {
+    max-width: 300px;
+  }
+
+  .hero {
+    padding: 56px 56px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Стили для средних планшетов */
+
+  .dashboard__image {
+    width: 400px;
+    height: 300px;
+    top: 35px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  /* Стили для больших планшетов и десктопов */
+  .dashboard__image {
+    width: 400px;
+    height: 300px;
+    top: 35px;
+  }
+  .value-card__content {
+    max-width: 300px;
+  }
+
+  .hero {
+    padding: 75px 0;
+  }
+  .hero__text-content {
+    max-width: 300px;
+  }
+
+  .dashboard {
+    height: auto;
+  }
+  .dashboard__text {
+    flex: 0 0 400px;
+  }
+  .cta__background {
+    top: auto;
+    bottom: 0;
+  }
+  .footer {
+    position: relative;
+    bottom: 0;
+  }
 }
 
 @media (max-width: 992px) {
-  .container {
-    max-width: 720px;
+  .modal {
+    padding: 24px 16px !important;
+    gap: 48px !important;
+  }
+  .modal h2 {
+    font-size: 24px !important;
+    line-height: 32px !important;
+  }
+  .overlay {
+    padding: 20px;
+  }
+  .overlap-hidden {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    max-height: 320px;
+  }
+  .image-7 {
+    right: 0;
+    top: 30px;
   }
 
+  .image-8 {
+    right: -50px;
+    top: 0;
+  }
+  .dashboard__text {
+    flex: 0 0 auto;
+    width: 100%;
+  }
   .comparison-card {
     flex-direction: column;
     align-items: start;
@@ -1426,13 +1498,6 @@
   .section-title--center {
     text-align: left;
   }
-  .div-2 {
-    display: block;
-  }
-  .image-8,
-  .image-7 {
-    left: 0;
-  }
   .case-card {
     flex: 0 0 300px;
   }
@@ -1475,6 +1540,7 @@
 
   .app-showcase__device {
     align-items: center;
+    gap: 24px;
   }
 
   .dashboard {
@@ -1498,6 +1564,9 @@
 
   .team__header {
     gap: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .case-card__header {
@@ -1530,6 +1599,16 @@
   }
   .section-title {
     font-size: 24px;
+    line-height: normal;
+    max-width: 290px;
+  }
+  #cases {
+    padding: 80px 0 30px;
+  }
+
+  .glow-effect--2 {
+    border-radius: 0;
+    transform: none;
   }
   .portfolio__header,
   .cases__header,
@@ -1560,11 +1639,14 @@
     position: relative;
     height: auto;
     top: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
   }
 
   .image-7,
   .image-8 {
-    position: static;
+    position: relative;
     width: 100%;
     height: auto;
     border-radius: 0 0 24px 24px;
@@ -1617,8 +1699,17 @@
   .text-wrapper-4 {
     line-height: 1;
   }
-  .person--1 {
-    margin-bottom: 32px;
+
+  .signature {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .glow-effect-dashboard {
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
+    transform: rotate(0);
   }
 }
 
@@ -1628,4 +1719,237 @@
 }
 .rotating-text.hidden {
   opacity: 0;
+}
+
+.wrapper {
+  padding: 80px 0;
+}
+
+.title-center {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.signature {
+  margin-top: 50px;
+  /* text-align: right; */
+  display: flex;
+  gap: 30px;
+}
+.stamp {
+  margin-top: 30px;
+}
+
+.info_text_page {
+  font-size: 17px;
+  line-height: 23px;
+  margin-top: 15px;
+  overflow: hidden;
+}
+.notch {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 84px;
+  height: 24px;
+  background-image: url("../img/FrontCamera.png");
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.iphone-frame {
+  position: relative;
+  width: 330px; /* Ширина изображения телефона */
+  height: 700px; /* Высота изображения телефона */
+  background-image: url("../img/phone.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  top: 60px;
+}
+
+.iframe-container {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  width: 310px;
+  height: 656px;
+  overflow: hidden;
+  border-radius: 42px;
+}
+
+.iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.2);
+  transform-origin: center;
+}
+
+/* modal */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(13, 12, 19, 0.5);
+  backdrop-filter: blur(7px); /* <-- Blur здесь */
+  -webkit-backdrop-filter: blur(7px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+
+.modal {
+  background: #0d0c13;
+  padding: 72px;
+  border-radius: 24px;
+  max-width: 917px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.modal h2 {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 800;
+}
+
+.modal span {
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.information--modal {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.checkbox-row input[type="checkbox"] {
+  display: none;
+}
+
+.checkmark-icon {
+  background: #f91155;
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+  padding: 4px;
+}
+.hidden-modal {
+  display: none !important;
+}
+
+
+/* Маленькие планшеты */
+@media (min-width: 600px) and (max-width: 767px) {
+  .div-2 {
+    flex-direction: row;
+  }
+}
+
+/* Средние планшеты */
+@media (min-width: 768px) and (max-width: 991px) {
+  .div-2 {
+    flex-direction: row;
+  }
+  .section-title {
+    max-width: 380px;
+  }
+
+  .dashboard__image {
+    height: 300px;
+  }
+
+  .div-2 {
+    align-items: start;
+  }
+}
+
+/* Большие планшеты */
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+.fullscreen-play-button {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(249, 17, 85, 0.64);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.fullscreen-play-button:hover {
+  background-color: rgb(249, 17, 85);
+  color: rgb(255, 255, 255);
+}
+
+/* Модалка */
+.modal-video {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-video.open {
+  display: flex;
+}
+
+.modal-content-video {
+  position: relative;
+  width: 90%;
+  max-width: 960px;
+  aspect-ratio: 16 / 9;
+  background: black;
+}
+
+.modal-content-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
 }

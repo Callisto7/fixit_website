@@ -23,10 +23,14 @@
       <header class="header">
         <div class="container">
           <div class="header__content">
-            <div class="logo">
-              <span class="logo__text">Fixit</span>
-              <span class="logo__subtext">Оцифровка бизнеса для селлеров</span>
-            </div>
+            <a href="index.html" class="logo__link">
+              <div class="logo">
+                <span class="logo__text">Fixit</span>
+                <span class="logo__subtext"
+                  >Оцифровка бизнеса для селлеров</span
+                >
+              </div>
+            </a>
 
             <nav class="nav">
               <ul class="nav__list">
@@ -43,13 +47,18 @@
             </nav>
 
             <div class="header__actions">
-              <button class="btn btn--secondary">Попробовать</button>
+              <button class="btn btn--secondary">
+                <a href="https://t.me/fixitmp_bot" target="_blank"
+                  >Попробовать</a
+                >
+              </button>
               <div class="user-profile">
-                <img
-                  src="./img/tg-icon.svg"
-                  alt="User Profile"
-                  class="user-profile__pic"
-                />
+                <a href="https://t.me/fixit_support_team" target="_blank">
+                  <img
+                    src="./img/tg-icon.svg"
+                    alt="User Profile"
+                    class="user-profile__pic"
+                /></a>
               </div>
             </div>
           </div>
@@ -71,29 +80,49 @@
                 </p>
               </div>
               <div class="value-prop__actions">
-                <button class="btn btn--primary">
-                  Подключить за 100₽ в день
-                </button>
+                <a href="https://t.me/fixitmp_bot" target="_blank"
+                  ><button class="btn btn--primary">
+                    Подключить за 100₽ в день
+                  </button></a
+                >
+
                 <p class="value-prop__note">
                   Ежедневный риск–менеджмент. Узнайте, где вы теряете деньги,
                   прямо сейчас!
                 </p>
               </div>
             </div>
-            <div class="value-prop__image">
-              <button class="button-play" aria-label="Play">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M8 5v14l11-7L8 5z" fill="#fff" />
+            <div class="value-prop__image" style="position: relative">
+              <img
+                src="./img/poster.jpeg"
+                style="width: 100%; display: block"
+              />
+              <button class="fullscreen-play-button" onclick="openModal()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 24"
+                  width="2em"
+                  height="2em"
+                >
+                  <path
+                    d="M16.097 9.542c1.603.945 2.405 1.418 2.662 2.023a2 2 0 0 1-.033 1.643c-.283.594-1.103 1.033-2.744 1.912l-6.271 3.358c-1.554.831-2.33 1.247-2.965 1.166a2 2 0 0 1-1.375-.824C5 18.3 5 17.42 5 15.657V8.6c0-1.835 0-2.753.385-3.28a2 2 0 0 1 1.419-.81c.65-.065 1.44.401 3.021 1.334z"
+                  ></path>
                 </svg>
               </button>
-              <img
-                src="./img/gallery/image.svg"
-                alt="Product Showcase"
-                class="value-prop__img"
-              />
+            </div>
+            <div id="videoModal" class="modal-video">
+              <div class="modal-content-video">
+                <button class="modal-close-button" onclick="closeModal()">✖</button>
+                <iframe
+                  id="modal-video"
+                  src=""
+                  allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                  allowfullscreen
+                ></iframe>
+              </div>
             </div>
           </div>
-
           <div class="value-prop__cards">
             <div class="value-card">
               <div class="value-card__content">
@@ -103,7 +132,10 @@
                     Попробуйте за 10 рублей. Откроем доступ на 10 дней.
                   </p>
                 </div>
-                <a href="#" class="value-card__link"
+                <a
+                  href="https://t.me/fixitmp_bot"
+                  class="value-card__link"
+                  target="_blank"
                   >Попробовать <span class="arrow-icon"></span
                 ></a>
               </div>
@@ -115,7 +147,7 @@
                   Знаем все причины, почему вы не можете заработать на
                   маркетплейсах
                 </h3>
-                <a href="#" class="value-card__link"
+                <a href="https://t.me/fixitwhy_bot" class="value-card__link"
                   >Скачать пример отчета<span class="arrow-icon"></span
                 ></a>
               </div>
@@ -187,91 +219,63 @@
         <div class="container">
           <div class="portfolio__header">
             <h2 class="section-title">
-              Fixit показывает, где вы теряете прибыль
+              Каждый день вы теряете деньги. <br />
+              Fixit покажет, где именно
             </h2>
             <div class="portfolio__slider" id="portfolioSlider">
               <div class="portfolio-item">
                 <div class="portfolio-item__image">
-                  <button class="button-play" aria-label="Play">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M8 5v14l11-7L8 5z" fill="#fff" />
-                    </svg>
-                  </button>
-
-                  <img
-                    src="./img/team/1.png"
-                    alt="Portfolio Image 1"
-                    class="portfolio-item__img"
-                  />
-
-                  <!-- Скрытое видео -->
-                  <video
-                    class="portfolio-item__video"
-                    width="100%"
-                    playsinline
-                    style="display: none"
+                  <div
+                    style="
+                      position: relative;
+                      padding-top: 177.78%;
+                      width: 100%;
+                    "
                   >
-                    <source src="./video/1.mp4" type="video/mp4" />
-                    Ваш браузер не поддерживает видео.
-                  </video>
+                    <iframe
+                      src="https://kinescope.io/embed/tEuVjiN2xtLXH7aniHozFG"
+                      allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                      frameborder="0"
+                      allowfullscreen
+                      style="
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                      "
+                    ></iframe>
+                  </div>
                 </div>
 
                 <p class="portfolio-item__description">
-                  Система предупредит о риске Out of Stock за 14 дней. Вы
-                  успеете пополнить склад.
+                  Fixit показывает, где вы теряете прибыль
                 </p>
               </div>
 
               <div class="portfolio-item">
                 <div class="portfolio-item__image">
-                  <button class="button-play" aria-label="Play">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M8 5v14l11-7L8 5z" fill="#fff" />
-                    </svg>
-                  </button>
-                  <img
-                    src="./img/team/2.png"
-                    alt="Portfolio Image 2"
-                    class="portfolio-item__img"
-                  />
-                </div>
-                <p class="portfolio-item__description">
-                  Fixit предупредит от штрафах, чтобы маркетплейс не «съел»
-                  внезапно всю прибыль за месяц.
-                </p>
-              </div>
-
-              <div class="portfolio-item">
-                <div class="portfolio-item__image">
-                  <button class="button-play" aria-label="Play">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M8 5v14l11-7L8 5z" fill="#fff" />
-                    </svg>
-                  </button>
-                  <img
-                    src="./img/team/3.png"
-                    alt="Portfolio Image 3"
-                    class="portfolio-item__img"
-                  />
-                </div>
-                <p class="portfolio-item__description">
-                  Fixit предотвращает вал возвратов от конкурентов. Вы успеете
-                  обратиться в СБ маркетплейса.
-                </p>
-              </div>
-
-              <div class="portfolio-item">
-                <div class="portfolio-item__image">
-                  <button class="button-play" aria-label="Play">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M8 5v14l11-7L8 5z" fill="#fff" />
-                    </svg>
-                  </button>
-                  <img
-                    src="./img/team/4.png"
-                    alt="Portfolio Image 4"
-                    class="portfolio-item__img"
-                  />
+                  <div
+                    style="
+                      position: relative;
+                      padding-top: 177.78%;
+                      width: 100%;
+                    "
+                  >
+                    <iframe
+                      src="https://kinescope.io/embed/gwvsDQfvUNATuSFhwt7C1a"
+                      allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                      frameborder="0"
+                      allowfullscreen
+                      style="
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                      "
+                    ></iframe>
+                  </div>
                 </div>
                 <p class="portfolio-item__description">
                   Сервис предупреждает о перетарке склада и поможет разморозить
@@ -281,52 +285,119 @@
 
               <div class="portfolio-item">
                 <div class="portfolio-item__image">
-                  <button class="button-play" aria-label="Play">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M8 5v14l11-7L8 5z" fill="#fff" />
-                    </svg>
-                  </button>
-                  <img
-                    src="./img/team/5.png"
-                    alt="Portfolio Image 5"
-                    class="portfolio-item__img"
-                  />
+                  <div
+                    style="
+                      position: relative;
+                      padding-top: 177.78%;
+                      width: 100%;
+                    "
+                  >
+                    <iframe
+                      src="https://kinescope.io/embed/piWT9qCCpDDxcbphRHq2CY"
+                      allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                      frameborder="0"
+                      allowfullscreen
+                      style="
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                      "
+                    ></iframe>
+                  </div>
+                </div>
+                <p class="portfolio-item__description">
+                  Система предупредит о риске Out of Stock за 14 дней. Вы
+                  успеете пополнить склад.
+                </p>
+              </div>
+
+              <div class="portfolio-item">
+                <div class="portfolio-item__image">
+                  <div
+                    style="
+                      position: relative;
+                      padding-top: 177.78%;
+                      width: 100%;
+                    "
+                  >
+                    <iframe
+                      src="https://kinescope.io/embed/szb4J4zZaSvmnqDqGNCDYt"
+                      allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                      frameborder="0"
+                      allowfullscreen
+                      style="
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                      "
+                    ></iframe>
+                  </div>
                 </div>
                 <p class="portfolio-item__description">
                   Fixit помогает восстановить СПП и избежать падения продаж
                 </p>
               </div>
+              <div class="portfolio-item">
+                <div class="portfolio-item__image">
+                  <div
+                    style="
+                      position: relative;
+                      padding-top: 177.78%;
+                      width: 100%;
+                    "
+                  >
+                    <iframe
+                      src="https://kinescope.io/embed/5LMWS2X3Aegk6JUzgbG1jc"
+                      allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                      frameborder="0"
+                      allowfullscreen
+                      style="
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                      "
+                    ></iframe>
+                  </div>
+                </div>
+                <p class="portfolio-item__description">
+                  Fixit предотвращает вал возвратов от конкурентов. Вы успеете
+                  обратиться в СБ маркетплейса.
+                </p>
+              </div>
             </div>
           </div>
-
           <div class="portfolio__dots" id="portfolioDots"></div>
         </div>
         <div class="glow-effect glow-effect--6"></div>
       </section>
       <section class="hero">
         <div class="container">
-          <div class="hero__content">
-            <div class="hero__text-content">
-              <h1 class="hero__title">
-                Почему вы теряете деньги на маркетплейсах?
-              </h1>
-              <p class="hero__subtitle">Расскажем подробнее про 32 причины</p>
-              <button class="btn btn--primary width-fitcontent">
+          <div class="hero__text-content">
+            <h1 class="hero__title">
+              Почему вы теряете деньги на маркетплейсах?
+            </h1>
+            <p class="hero__subtitle">Расскажем подробнее про 32 причины</p>
+            <a href="https://t.me/fixitwhy_bot" target="_blank"
+              ><button class="btn btn--primary width-fitcontent">
                 Узнать все
-              </button>
-            </div>
+              </button></a
+            >
           </div>
         </div>
         <div class="hero__background">
           <img src="./img/pic.svg" />
         </div>
       </section>
-
       <section class="cases" id="cases">
         <div class="container">
           <div class="cases__header">
             <h2 class="section-title">Кейсы наших клиентов</h2>
-
             <div class="cases__slider" id="casesSlider">
               <div class="case-card">
                 <div class="case-card__header">
@@ -341,21 +412,18 @@
                 </div>
                 <div class="case-card__body">
                   <p class="case-card__period">3 месяца с Fixit:</p>
-
                   <div class="case-card__result">
                     <h4 class="case-card__metric">&gt;1 млн руб</h4>
                     <p class="case-card__description">
                       Разморозили оборотные средства, оптимизировав склад.
                     </p>
                   </div>
-
                   <div class="case-card__result">
                     <h4 class="case-card__metric">в 4 раза</h4>
                     <p class="case-card__description">
                       Ускорилась оборачиваемость
                     </p>
                   </div>
-
                   <div class="case-card__result">
                     <h4 class="case-card__metric">-42%</h4>
                     <p class="case-card__description">
@@ -364,7 +432,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="case-card">
                 <div class="case-card__header">
                   <div class="case-card__tags">
@@ -378,7 +445,6 @@
                 </div>
                 <div class="case-card__body">
                   <p class="case-card__period">2 месяца с Fixit:</p>
-
                   <div class="case-card__result">
                     <h4 class="case-card__metric">-30%</h4>
                     <p class="case-card__description">
@@ -386,19 +452,16 @@
                       товара
                     </p>
                   </div>
-
                   <div class="case-card__result">
                     <h4 class="case-card__metric">+19%</h4>
                     <p class="case-card__description">К локальным продажам</p>
                   </div>
-
                   <div class="case-card__result">
                     <h4 class="case-card__metric">-27%</h4>
                     <p class="case-card__description">Неликвидного товара</p>
                   </div>
                 </div>
               </div>
-
               <div class="case-card">
                 <div class="case-card__header">
                   <div class="case-card__tags">
@@ -445,11 +508,14 @@
             <div class="div-2">
               <article class="person person--1">
                 <div class="overlap-group-6">
-                  <img
-                    class="image-7"
-                    src="./img/man2.png"
-                    alt="Boris Bakhvalov"
-                  />
+                  <div class="overlap-hidden">
+                    <img
+                      class="image-7"
+                      src="./img/man2.png"
+                      alt="Boris Bakhvalov"
+                    />
+                  </div>
+
                   <div class="rectangle-4"></div>
                   <div class="frame-25">
                     <div class="frame-3">
@@ -489,23 +555,27 @@
               </article>
               <article class="person">
                 <div class="overlap-11">
-                  <img
-                    class="image-8"
-                    src="./img/man1.png"
-                    alt="Vadim Panasyuk"
-                  />
+                  <div class="overlap-hidden">
+                    <img
+                      class="image-8"
+                      src="./img/man1.png"
+                      alt="Vadim Panasyuk"
+                    />
+                  </div>
                   <div class="rectangle-5"></div>
                   <div class="frame-28">
                     <div class="frame-3">
                       <h3 class="text-wrapper">Вадим Панасюк</h3>
-                      <p class="title-7 fw-bold">Бизнес-аналитик с опытом 15+ лет</p>
+                      <p class="title-7 fw-bold">
+                        Бизнес-аналитик с опытом 15+ лет
+                      </p>
                     </div>
                     <p class="text-wrapper-3">
                       С 2011 года – ведущий аналитик в инвестпроектах, работал с
-                      лидерами рынка РФ. С 20ХХ года руководит одной из
+                      лидерами рынка РФ. С 2020 года руководит одной из
                       крупнейших команд разработчиков BI.
                     </p>
-                    <div class="frame-26">
+                    <div class="frame-26 fw-bold">
                       <div class="frame-29">
                         <span class="text-wrapper-4">ВТБ</span>
                       </div>
@@ -542,11 +612,14 @@
                 Аналитика без сложных таблиц и лишних данных
               </h2>
               <p class="dashboard__description">
-                Ключевые показатели в 1 файле. 15 минут в день вместо 2-4 часов.
+                Ключевые показатели в 1 файле. <br />
+                15 минут в день вместо 2-4 часов.
               </p>
-              <button class="btn btn--primary width-fitcontent">
-                Попробовать за 10₽
-              </button>
+              <a href="https://t.me/fixitmp_bot" target="_blank">
+                <button class="btn btn--primary width-fitcontent">
+                  Попробовать за 10₽
+                </button></a
+              >
             </div>
           </div>
         </div>
@@ -592,7 +665,10 @@
 
               <div class="comparison-card">
                 <div class="comparison-card__number"></div>
-                <h3 class="comparison-card__title">Excel <br /> и Google таблицы</h3>
+                <h3 class="comparison-card__title">
+                  Excel <br />
+                  и Google таблицы
+                </h3>
                 <p class="comparison-card__description">
                   С таблицами селлер занимается цифрами, а не продажами. Таблицы
                   - это анализ истории, а нужно предвидеть будущее. Пока селлер
@@ -656,12 +732,18 @@
                   действуете.
                 </p>
               </div>
-              <div class="device-frame">
-                <img
-                  src="./img/iphone.png"
-                  alt="App Screenshot"
-                  class="device-frame__screen"
-                />
+              <div class="iphone-frame">
+                <div class="iframe-container">
+                  <div class="notch"></div>
+                  <iframe
+                    src="https://kinescope.io/embed/ccQGdbfbLUzU1UUTwnKQeP"
+                    allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                    frameborder="0"
+                    allowfullscreen
+                    width="1080"
+                    height="1920"
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>
@@ -672,27 +754,28 @@
 
       <section class="cta">
         <div class="container">
-          <div class="cta__content">
-            <div class="cta__text">
-              <div class="cta-title_container">
-                <h2 class="cta__title">
-                  Подпишитесь на Fixit и получите доступ к закрытым вебинарам
-                </h2>
-                <p class="cta__description">
-                  Разбор реальных кейсов, опыт глобальных компаний и ответы на
-                  ваши вопросы
-                </p>
-              </div>
-              <button class="btn btn--primary width-fitcontent">
-                Подписаться
-              </button>
+          <div class="cta__text">
+            <div class="cta-title_container">
+              <h2 class="cta__title">
+                Подпишитесь на Fixit и получите доступ к закрытым вебинарам
+              </h2>
+              <p class="cta__description">
+                Разбор реальных кейсов, опыт глобальных компаний и ответы на
+                ваши вопросы
+              </p>
             </div>
+            <a href="https://t.me/fixitmp_bot" target="_blank"
+              ><button class="btn btn--primary width-fitcontent">
+                Подписаться
+              </button></a
+            >
+          </div>
+
+          <div class="cta__background">
+            <img src="./img/pic.svg" />
           </div>
         </div>
         <div class="glow-effect glow-effect--10"></div>
-        <div class="cta__background">
-          <img src="./img/pic.svg" />
-        </div>
       </section>
 
       <footer class="footer">
@@ -705,24 +788,126 @@
 
             <div class="footer__info">
               <p class="footer__text">
-                АО «Селлерскан» <br />
-                г. Москва, 119002, б-р Смоленский, д. 24, стр. 2, пом. 8/3/1<br />
-                <a href="mailto:info@sellerscan.ru" class="footer__link"
-                  >info@sellerscan.ru</a
+                ООО «ВИЗУАТОРС» <br />
+                109428, Россия, г. Москва, Рязанский проспект, <br />
+                дом 10, строение 18, этаж 8, офис №8.3/848<br />
+                <a href="mailto:info@vizuators.com" class="footer__link"
+                  >info@vizuators.com</a
                 >
               </p>
             </div>
 
             <div class="footer__links">
-              <a href="#" class="footer__link">Политика конфиденциальности</a
+              <a href="privacy.html" class="footer__link" target="_blank"
+                >Политика конфиденциальности</a
               ><br />
-              <a href="#" class="footer__link">Договор оферты</a>
+              <a href="offer.html" class="footer__link" target="_blank"
+                >Договор оферты</a
+              >
               <br />
-              <a href="#" class="footer__link">Получение заказа</a>
+              <a href="shopping.html" class="footer__link" target="_blank"
+                >Получение заказа</a
+              >
             </div>
           </div>
         </div>
       </footer>
+    </div>
+    <div class="overlay hidden-modal">
+      <div class="modal">
+        <div class="information--modal">
+          <h2>
+            Отслеживайте угрозы <br />
+            для бизнеса 10 дней за 10₽
+          </h2>
+          <span>Fixit:</span>
+          <div class="checkbox-container">
+            <div class="checkbox-row">
+              <input type="checkbox" checked />
+              <span>
+                <svg
+                  class="checkmark-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M14.7678 2.55273H13.5853C13.4195 2.55273 13.2622 2.62886 13.1607 2.75913L6.18569 11.595L2.84114 7.35725C2.79055 7.29301 2.72606 7.24107 2.65252 7.20532C2.57897 7.16958 2.49829 7.15095 2.41652 7.15085H1.234C1.12065 7.15085 1.05806 7.28112 1.12742 7.36909L5.76107 13.2394C5.97761 13.5134 6.39378 13.5134 6.61201 13.2394L14.8744 2.76928C14.9438 2.683 14.8812 2.55273 14.7678 2.55273Z"
+                    fill="white"
+                  />
+                </svg>
+                Заранее предупредит о штрафах, риске Out of Stock, перетарке
+                склада и других рисках.</span
+              >
+            </div>
+            <div class="checkbox-row">
+              <input type="checkbox" checked />
+              <span>
+                <svg
+                  class="checkmark-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M14.7678 2.55273H13.5853C13.4195 2.55273 13.2622 2.62886 13.1607 2.75913L6.18569 11.595L2.84114 7.35725C2.79055 7.29301 2.72606 7.24107 2.65252 7.20532C2.57897 7.16958 2.49829 7.15095 2.41652 7.15085H1.234C1.12065 7.15085 1.05806 7.28112 1.12742 7.36909L5.76107 13.2394C5.97761 13.5134 6.39378 13.5134 6.61201 13.2394L14.8744 2.76928C14.9438 2.683 14.8812 2.55273 14.7678 2.55273Z"
+                    fill="white"
+                  />
+                </svg>
+                Поможет оптимизировать склад, снизить расходы на логистику и
+                хранение.</span
+              >
+            </div>
+            <div class="checkbox-row">
+              <input type="checkbox" checked />
+              <span>
+                <svg
+                  class="checkmark-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M14.7678 2.55273H13.5853C13.4195 2.55273 13.2622 2.62886 13.1607 2.75913L6.18569 11.595L2.84114 7.35725C2.79055 7.29301 2.72606 7.24107 2.65252 7.20532C2.57897 7.16958 2.49829 7.15095 2.41652 7.15085H1.234C1.12065 7.15085 1.05806 7.28112 1.12742 7.36909L5.76107 13.2394C5.97761 13.5134 6.39378 13.5134 6.61201 13.2394L14.8744 2.76928C14.9438 2.683 14.8812 2.55273 14.7678 2.55273Z"
+                    fill="white"
+                  />
+                </svg>
+                Покажет слабые места вашего магазина и упущенную прибыль.</span
+              >
+            </div>
+            <div class="checkbox-row">
+              <input type="checkbox" checked />
+              <span>
+                <svg
+                  class="checkmark-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M14.7678 2.55273H13.5853C13.4195 2.55273 13.2622 2.62886 13.1607 2.75913L6.18569 11.595L2.84114 7.35725C2.79055 7.29301 2.72606 7.24107 2.65252 7.20532C2.57897 7.16958 2.49829 7.15095 2.41652 7.15085H1.234C1.12065 7.15085 1.05806 7.28112 1.12742 7.36909L5.76107 13.2394C5.97761 13.5134 6.39378 13.5134 6.61201 13.2394L14.8744 2.76928C14.9438 2.683 14.8812 2.55273 14.7678 2.55273Z"
+                    fill="white"
+                  />
+                </svg>
+                Поможет зарабатывать больше и управлять бизнесом без
+                нервов.</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <a href="https://t.me/fixitmp_bot" target="_blank"
+          ><button class="btn btn--primary">Попробовать за 10₽</button></a
+        >
+      </div>
     </div>
     <script src="./js/common.js"></script>
   </body>

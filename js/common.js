@@ -2,7 +2,7 @@ const phrases = [
   "упустить продажи",
   "слить бюджет",
   "отстать от конкурентов",
-  "переплатить маркетплейсам",
+  "переплатить Wildberries",
   "выгореть и все бросить",
 ];
 
@@ -21,15 +21,39 @@ setInterval(() => {
   }, 500);
 }, 3000);
 
-document.querySelectorAll(".portfolio-item").forEach((item) => {
-  const button = item.querySelector(".button-play");
-  const img = item.querySelector(".portfolio-item__img");
-  const video = item.querySelector(".portfolio-item__video");
+let hasShownModal = false;
 
-  button.addEventListener("click", () => {
-    button.style.display = "none";
-    img.style.display = "none";
-    video.style.display = "block";
-    video.play();
-  });
+function showModal() {
+  document.querySelector(".overlay").classList.remove("hidden-modal");
+}
+
+function handleMouseLeave(event) {
+  if (event.clientY < 0 && !hasShownModal) {
+    hasShownModal = true;
+    showModal();
+  }
+}
+
+document.addEventListener("mouseout", handleMouseLeave);
+
+// Закрытие модалки по кнопке или клику вне её
+document.querySelector('.overlay').addEventListener('click', function (e) {
+    if (e.target === this) {
+        this.classList.add('hidden-modal');
+    }
 });
+
+const modal = document.getElementById("videoModal");
+const modalVideo = document.getElementById("modal-video");
+const kinescopeUrl = "https://kinescope.io/embed/rX7yrRh8rFgHGQtcGtkxyK";
+
+function openModal() {
+  modal.classList.add("open");
+  modalVideo.src = kinescopeUrl + "?autoplay=1";
+}
+
+function closeModal() {
+  modal.classList.remove("open");
+  modalVideo.src = ""; // Сброс — останавливает видео
+}
+modal.addEventListener("click", closeModal);
