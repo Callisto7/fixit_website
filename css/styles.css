@@ -824,7 +824,6 @@
 }
 
 .value-prop__text {
-  flex: 0 0 728px;
   padding: 40px;
   background-color: var(--card-bg);
   border-radius: var(--border-radius-md);
@@ -1713,6 +1712,14 @@
   .iphone-frame {
     top: 100px!important;
   }
+
+  .value-prop__actions {
+    display: block;
+  }
+
+  .value-prop__actions .btn--primary {
+    width: 100%;
+  }
 }
 
 .rotating-text {
@@ -1885,6 +1892,16 @@
 
   .div-2 {
     align-items: start;
+  }
+  .width-fitcontent {
+    width: fit-content;
+  }
+  .value-prop__actions .btn--primary {
+    width: fit-content;
+  }
+  .footer__content {
+    flex-direction: row;
+    align-items: center;
   }
 }
 
