@@ -451,7 +451,6 @@
 }
 
 .case-card {
-  flex: 0 0 356px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -1191,7 +1190,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 70px;
 }
 
 /* CTA section */
