@@ -1090,7 +1090,10 @@
   background-color: var(--primary-color);
   transform: scale(1.2);
 }
-
+.portfolio__slider.grabbing {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
 /* Comparison section */
 .comparison {
   padding: 180px 0 80px;
@@ -1710,7 +1713,7 @@
   }
 
   .iphone-frame {
-    top: 100px!important;
+    top: 100px !important;
   }
 
   .value-prop__actions {
@@ -1869,7 +1872,6 @@
   display: none !important;
 }
 
-
 /* Маленькие планшеты */
 @media (min-width: 600px) and (max-width: 767px) {
   .div-2 {
@@ -1906,7 +1908,8 @@
 }
 
 /* Большие планшеты */
-@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
 
 .fullscreen-play-button {
   position: absolute;
