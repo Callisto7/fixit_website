@@ -1711,6 +1711,10 @@
     border-radius: 0;
     transform: rotate(0);
   }
+
+  .iphone-frame {
+    top: 100px!important;
+  }
 }
 
 .rotating-text {
