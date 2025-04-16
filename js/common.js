@@ -37,10 +37,10 @@ function handleMouseLeave(event) {
 document.addEventListener("mouseout", handleMouseLeave);
 
 // Закрытие модалки по кнопке или клику вне её
-document.querySelector('.overlay').addEventListener('click', function (e) {
-    if (e.target === this) {
-        this.classList.add('hidden-modal');
-    }
+document.querySelector(".overlay").addEventListener("click", function (e) {
+  if (e.target === this) {
+    this.classList.add("hidden-modal");
+  }
 });
 
 const modal = document.getElementById("videoModal");
@@ -57,34 +57,3 @@ function closeModal() {
   modalVideo.src = ""; // Сброс — останавливает видео
 }
 modal.addEventListener("click", closeModal);
-
-const slider = document.getElementById('portfolioSlider');
-
-let isDown = false;
-let startX;
-let scrollLeft;
-
-slider.addEventListener('mousedown', (e) => {
-  isDown = true;
-  slider.classList.add('grabbing');
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-});
-
-slider.addEventListener('mouseleave', () => {
-  isDown = false;
-  slider.classList.remove('grabbing');
-});
-
-slider.addEventListener('mouseup', () => {
-  isDown = false;
-  slider.classList.remove('grabbing');
-});
-
-slider.addEventListener('mousemove', (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 1.5; // можно настроить чувствительность
-  slider.scrollLeft = scrollLeft - walk;
-});

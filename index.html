@@ -93,27 +93,37 @@
               </div>
             </div>
             <div class="value-prop__image" style="position: relative">
-              <img
-                src="./img/poster.jpeg"
-                style="width: 100%; display: block"
-              />
+              <picture>
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./img/mobilePoster.png"
+                  style="width: 100%;"
+                />
+                <img
+                  src="./img/poster.jpeg"
+                  style="width: 100%;"
+                  alt="Poster"
+                />
+              </picture>
               <button class="fullscreen-play-button" onclick="openModal()">
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 24"
-                  width="2em"
-                  height="2em"
-                >
-                  <path
-                    d="M16.097 9.542c1.603.945 2.405 1.418 2.662 2.023a2 2 0 0 1-.033 1.643c-.283.594-1.103 1.033-2.744 1.912l-6.271 3.358c-1.554.831-2.33 1.247-2.965 1.166a2 2 0 0 1-1.375-.824C5 18.3 5 17.42 5 15.657V8.6c0-1.835 0-2.753.385-3.28a2 2 0 0 1 1.419-.81c.65-.065 1.44.401 3.021 1.334z"
-                  ></path>
-                </svg>
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 24"
+                width="2em"
+                height="2em"
+              >
+                <path
+                  d="M16.097 9.542c1.603.945 2.405 1.418 2.662 2.023a2 2 0 0 1-.033 1.643c-.283.594-1.103 1.033-2.744 1.912l-6.271 3.358c-1.554.831-2.33 1.247-2.965 1.166a2 2 0 0 1-1.375-.824C5 18.3 5 17.42 5 15.657V8.6c0-1.835 0-2.753.385-3.28a2 2 0 0 1 1.419-.81c.65-.065 1.44.401 3.021 1.334z"
+                ></path>
+              </svg>
               </button>
             </div>
             <div id="videoModal" class="modal-video">
               <div class="modal-content-video">
-                <button class="modal-close-button" onclick="closeModal()">✖</button>
+                <button class="modal-close-button" onclick="closeModal()">
+                  ✖
+                </button>
                 <iframe
                   id="modal-video"
                   src=""
@@ -147,7 +157,10 @@
                   Знаем все причины, почему вы не можете заработать на
                   маркетплейсах
                 </h3>
-                <a href="https://t.me/fixitwhy_bot" class="value-card__link"
+                <a
+                  href="https://t.me/fixitwhy_bot"
+                  class="value-card__link"
+                  target="_blank"
                   >Скачать пример отчета<span class="arrow-icon"></span
                 ></a>
               </div>
@@ -222,7 +235,9 @@
               Каждый день вы теряете деньги. <br />
               Fixit покажет, где именно
             </h2>
+
             <div class="portfolio__slider" id="portfolioSlider">
+              <!-- Слайд -->
               <div class="portfolio-item">
                 <div class="portfolio-item__image">
                   <div
@@ -232,6 +247,8 @@
                       width: 100%;
                     "
                   >
+                    <!-- Перекрывающий слой -->
+                    <div class="iframe-overlay"></div>
                     <iframe
                       src="https://kinescope.io/embed/tEuVjiN2xtLXH7aniHozFG"
                       allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
@@ -247,12 +264,10 @@
                     ></iframe>
                   </div>
                 </div>
-
                 <p class="portfolio-item__description">
                   Fixit показывает, где вы теряете прибыль
                 </p>
               </div>
-
               <div class="portfolio-item">
                 <div class="portfolio-item__image">
                   <div
@@ -262,6 +277,7 @@
                       width: 100%;
                     "
                   >
+                    <div class="iframe-overlay"></div>
                     <iframe
                       src="https://kinescope.io/embed/gwvsDQfvUNATuSFhwt7C1a"
                       allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
@@ -282,7 +298,6 @@
                   оборотные средства.
                 </p>
               </div>
-
               <div class="portfolio-item">
                 <div class="portfolio-item__image">
                   <div
@@ -292,6 +307,7 @@
                       width: 100%;
                     "
                   >
+                    <div class="iframe-overlay"></div>
                     <iframe
                       src="https://kinescope.io/embed/piWT9qCCpDDxcbphRHq2CY"
                       allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
@@ -309,10 +325,9 @@
                 </div>
                 <p class="portfolio-item__description">
                   Система предупредит о риске Out of Stock за 14 дней. Вы
-                  успеете пополнить склад.
+                  успеете пополнить склад
                 </p>
               </div>
-
               <div class="portfolio-item">
                 <div class="portfolio-item__image">
                   <div
@@ -322,6 +337,7 @@
                       width: 100%;
                     "
                   >
+                    <div class="iframe-overlay"></div>
                     <iframe
                       src="https://kinescope.io/embed/szb4J4zZaSvmnqDqGNCDYt"
                       allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
@@ -350,6 +366,7 @@
                       width: 100%;
                     "
                   >
+                  <div class="iframe-overlay"></div>
                     <iframe
                       src="https://kinescope.io/embed/5LMWS2X3Aegk6JUzgbG1jc"
                       allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
@@ -376,6 +393,8 @@
         </div>
         <div class="glow-effect glow-effect--6"></div>
       </section>
+
+
       <section class="hero">
         <div class="container">
           <div class="hero__text-content">
@@ -402,11 +421,11 @@
               <div class="case-card">
                 <div class="case-card__header">
                   <div class="case-card__tags">
-                    <span class="tag tag--blue">ozon</span>
                     <span class="tag tag--gradient">wildberries</span>
                   </div>
                   <h3 class="case-card__title">
-                    Магазин женской одежды и предметов для ухода
+                    Магазин женской одежды <br />
+                    и предметов для ухода
                   </h3>
                   <p class="case-card__subtitle">200+ товарных позиций</p>
                 </div>
@@ -415,7 +434,7 @@
                   <div class="case-card__result">
                     <h4 class="case-card__metric">&gt;1 млн руб</h4>
                     <p class="case-card__description">
-                      Разморозили оборотные средства, оптимизировав склад.
+                      Разморозили оборотные средства, оптимизировав склад
                     </p>
                   </div>
                   <div class="case-card__result">
@@ -435,7 +454,6 @@
               <div class="case-card">
                 <div class="case-card__header">
                   <div class="case-card__tags">
-                    <span class="tag tag--blue">ozon</span>
                     <span class="tag tag--gradient">wildberries</span>
                   </div>
                   <h3 class="case-card__title">
@@ -465,7 +483,6 @@
               <div class="case-card">
                 <div class="case-card__header">
                   <div class="case-card__tags">
-                    <span class="tag tag--blue">ozon</span>
                     <span class="tag tag--gradient">wildberries</span>
                   </div>
                   <h3 class="case-card__title">Магазин футболок</h3>
@@ -477,7 +494,8 @@
                   <div class="case-card__result">
                     <h4 class="case-card__metric">+17% к продажам</h4>
                     <p class="case-card__description">
-                      За счет распределения товара по регионам
+                      За счет распределения товара <br />
+                      по регионам
                     </p>
                   </div>
 
@@ -655,7 +673,10 @@
 
               <div class="comparison-card">
                 <div class="comparison-card__number"></div>
-                <h3 class="comparison-card__title">Сервисы аналитики</h3>
+                <h3 class="comparison-card__title">
+                  Сервисы <br />
+                  аналитики
+                </h3>
                 <p class="comparison-card__description">
                   Не предупреждают о рисках заранее, отвечают на вопрос «что
                   произошло?» вместо «что нужно сделать прямо сейчас?».
@@ -673,7 +694,7 @@
                   С таблицами селлер занимается цифрами, а не продажами. Таблицы
                   - это анализ истории, а нужно предвидеть будущее. Пока селлер
                   анализирует историю, конкуренты зарабатывают. Занимает до 4
-                  часов в день
+                  часов в день.
                 </p>
               </div>
 
@@ -728,7 +749,7 @@
                   Оборот не значит прибыль
                 </h2>
                 <p class="section-subtitle section-subtitle--center">
-                  Но мы знаем, как это изменить: FixIT подсказывает, вы -
+                  Но мы знаем, как это изменить: FIXIT подсказывает, вы -
                   действуете.
                 </p>
               </div>
@@ -909,6 +930,44 @@
         >
       </div>
     </div>
+    <script>
+      const slider = document.getElementById("portfolioSlider");
+      const overlays = slider.querySelectorAll(".iframe-overlay");
+
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      slider.addEventListener("mousedown", (e) => {
+        isDown = true;
+        slider.classList.add("grabbing");
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+
+        // показать оверлеи (чтобы iframe не мешали)
+        overlays.forEach((el) => (el.style.display = "block"));
+      });
+
+      slider.addEventListener("mouseleave", () => {
+        isDown = false;
+        slider.classList.remove("grabbing");
+        overlays.forEach((el) => (el.style.display = "none"));
+      });
+
+      slider.addEventListener("mouseup", () => {
+        isDown = false;
+        slider.classList.remove("grabbing");
+        overlays.forEach((el) => (el.style.display = "none"));
+      });
+
+      slider.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        slider.scrollLeft = scrollLeft - walk;
+      });
+    </script>
     <script src="./js/common.js"></script>
   </body>
 </html>

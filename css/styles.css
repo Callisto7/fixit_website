@@ -455,6 +455,7 @@
   flex-direction: column;
   overflow: hidden;
   scroll-snap-align: start;
+  width: 100%;
 }
 
 .case-card__header {
@@ -1010,6 +1011,7 @@
 }
 
 /* Portfolio section */
+
 .portfolio {
   padding: 80px 0;
   position: relative;
@@ -1023,10 +1025,15 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
   scroll-snap-type: x mandatory;
+  cursor: grab;
 }
 
 .portfolio__slider::-webkit-scrollbar {
   display: none;
+}
+
+.portfolio__slider.grabbing {
+  cursor: grabbing;
 }
 
 .portfolio-item {
@@ -1035,15 +1042,6 @@
   flex-direction: column;
   gap: 16px;
   scroll-snap-align: start;
-}
-
-.portfolio__header,
-.cases__header,
-.comparison__header,
-.problems__header {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
 }
 
 .portfolio-item__image {
@@ -1057,17 +1055,33 @@
   overflow: hidden;
 }
 
-.portfolio-item__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .portfolio-item__description {
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
   color: var(--text-color);
+}
+
+.iframe-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: none; /* по умолчанию скрыт */
+}
+
+.portfolio__header,
+.cases__header,
+.comparison__header,
+.problems__header {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.portfolio-item__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .portfolio__dots {
@@ -1093,6 +1107,13 @@
 .portfolio__slider.grabbing {
   cursor: grabbing;
   cursor: -webkit-grabbing;
+}
+
+.iframe-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: none; /* по умолчанию скрыт */
 }
 /* Comparison section */
 .comparison {
@@ -1371,6 +1392,9 @@
     position: relative;
     bottom: 0;
   }
+  .iphone-frame {
+    top: 55px!important;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1384,6 +1408,10 @@
   }
   .overlay {
     padding: 20px;
+  }
+  .comparison-card__title {
+    font-size: 24px;
+    line-height: normal;
   }
   .overlap-hidden {
     position: relative;
@@ -1443,7 +1471,7 @@
   }
 
   .value-prop__image {
-    flex: 0 0 auto;
+    flex: 0 0 100%;
     width: 100%;
   }
 
@@ -1536,11 +1564,11 @@
   }
   .device-title {
     align-items: center;
+    width: 288px;
   }
 
   .app-showcase__device {
     align-items: center;
-    gap: 24px;
   }
 
   .dashboard {
@@ -1577,7 +1605,6 @@
     padding: 60px 0 30px;
   }
 
-  .app-showcase,
   .problems,
   .portfolio,
   .cases,
@@ -1712,16 +1739,16 @@
     transform: rotate(0);
   }
 
-  .iphone-frame {
-    top: 100px !important;
-  }
-
   .value-prop__actions {
     display: block;
   }
 
   .value-prop__actions .btn--primary {
     width: 100%;
+  }
+
+  .iphone-frame {
+    top: 55px!important;
   }
 }
 
@@ -1777,7 +1804,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  top: 60px;
+  top: 70px;
 }
 
 .iframe-container {
@@ -1876,6 +1903,33 @@
 @media (min-width: 600px) and (max-width: 767px) {
   .div-2 {
     flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard__image {
+    height: auto;
+  }
+  .overlap-hidden {
+    max-height: 390px;
+  }
+  .iphone-frame {
+    top: 55px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .dashboard__image {
+    height: 300px;
+  }
+  .overlap-hidden {
+    max-height: 450px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 576px) {
+  .dashboard__image {
+    height: 300px;
   }
 }
 
