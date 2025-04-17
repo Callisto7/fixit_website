@@ -97,26 +97,22 @@
                 <source
                   media="(max-width: 768px)"
                   srcset="./img/mobilePoster.png"
-                  style="width: 100%;"
+                  style="width: 100%"
                 />
-                <img
-                  src="./img/poster.jpeg"
-                  style="width: 100%;"
-                  alt="Poster"
-                />
+                <img src="./img/poster.jpeg" style="width: 100%" alt="Poster" />
               </picture>
               <button class="fullscreen-play-button" onclick="openModal()">
                 <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 22 24"
-                width="2em"
-                height="2em"
-              >
-                <path
-                  d="M16.097 9.542c1.603.945 2.405 1.418 2.662 2.023a2 2 0 0 1-.033 1.643c-.283.594-1.103 1.033-2.744 1.912l-6.271 3.358c-1.554.831-2.33 1.247-2.965 1.166a2 2 0 0 1-1.375-.824C5 18.3 5 17.42 5 15.657V8.6c0-1.835 0-2.753.385-3.28a2 2 0 0 1 1.419-.81c.65-.065 1.44.401 3.021 1.334z"
-                ></path>
-              </svg>
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 24"
+                  width="2em"
+                  height="2em"
+                >
+                  <path
+                    d="M16.097 9.542c1.603.945 2.405 1.418 2.662 2.023a2 2 0 0 1-.033 1.643c-.283.594-1.103 1.033-2.744 1.912l-6.271 3.358c-1.554.831-2.33 1.247-2.965 1.166a2 2 0 0 1-1.375-.824C5 18.3 5 17.42 5 15.657V8.6c0-1.835 0-2.753.385-3.28a2 2 0 0 1 1.419-.81c.65-.065 1.44.401 3.021 1.334z"
+                  ></path>
+                </svg>
               </button>
             </div>
             <div id="videoModal" class="modal-video">
@@ -237,7 +233,6 @@
             </h2>
 
             <div class="portfolio__slider" id="portfolioSlider">
-              <!-- Слайд -->
               <div class="portfolio-item">
                 <div class="portfolio-item__image">
                   <div
@@ -247,8 +242,9 @@
                       width: 100%;
                     "
                   >
-                    <!-- Перекрывающий слой -->
-                    <div class="iframe-overlay"></div>
+                    <!-- Прозрачный слой, чтобы ловить wheel -->
+                    <div class="video-scroll-overlay"></div>
+
                     <iframe
                       src="https://kinescope.io/embed/tEuVjiN2xtLXH7aniHozFG"
                       allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
@@ -264,6 +260,7 @@
                     ></iframe>
                   </div>
                 </div>
+
                 <p class="portfolio-item__description">
                   Fixit показывает, где вы теряете прибыль
                 </p>
@@ -277,7 +274,9 @@
                       width: 100%;
                     "
                   >
-                    <div class="iframe-overlay"></div>
+                    <!-- Прозрачный слой, чтобы ловить wheel -->
+                    <div class="video-scroll-overlay"></div>
+
                     <iframe
                       src="https://kinescope.io/embed/gwvsDQfvUNATuSFhwt7C1a"
                       allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
@@ -293,12 +292,36 @@
                     ></iframe>
                   </div>
                 </div>
+
                 <p class="portfolio-item__description">
                   Сервис предупреждает о перетарке склада и поможет разморозить
                   оборотные средства.
                 </p>
               </div>
               <div class="portfolio-item">
+                <!-- <div class="portfolio-item__image">
+                  <div
+                    style="
+                      position: relative;
+                      padding-top: 177.78%;
+                      width: 100%;
+                    "
+                  >
+                    <iframe
+                      src="https://kinescope.io/embed/piWT9qCCpDDxcbphRHq2CY"
+                      allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                      frameborder="0"
+                      allowfullscreen
+                      style="
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                      "
+                    ></iframe>
+                  </div>
+                </div> -->
                 <div class="portfolio-item__image">
                   <div
                     style="
@@ -307,7 +330,9 @@
                       width: 100%;
                     "
                   >
-                    <div class="iframe-overlay"></div>
+                    <!-- Прозрачный слой, чтобы ловить wheel -->
+                    <div class="video-scroll-overlay"></div>
+
                     <iframe
                       src="https://kinescope.io/embed/piWT9qCCpDDxcbphRHq2CY"
                       allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
@@ -323,12 +348,36 @@
                     ></iframe>
                   </div>
                 </div>
+
                 <p class="portfolio-item__description">
                   Система предупредит о риске Out of Stock за 14 дней. Вы
                   успеете пополнить склад
                 </p>
               </div>
               <div class="portfolio-item">
+                <!-- <div class="portfolio-item__image">
+                  <div
+                    style="
+                      position: relative;
+                      padding-top: 177.78%;
+                      width: 100%;
+                    "
+                  >
+                    <iframe
+                      src="https://kinescope.io/embed/szb4J4zZaSvmnqDqGNCDYt"
+                      allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                      frameborder="0"
+                      allowfullscreen
+                      style="
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                      "
+                    ></iframe>
+                  </div>
+                </div> -->
                 <div class="portfolio-item__image">
                   <div
                     style="
@@ -337,7 +386,9 @@
                       width: 100%;
                     "
                   >
-                    <div class="iframe-overlay"></div>
+                    <!-- Прозрачный слой, чтобы ловить wheel -->
+                    <div class="video-scroll-overlay"></div>
+
                     <iframe
                       src="https://kinescope.io/embed/szb4J4zZaSvmnqDqGNCDYt"
                       allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
@@ -358,6 +409,29 @@
                 </p>
               </div>
               <div class="portfolio-item">
+                <!-- <div class="portfolio-item__image">
+                  <div
+                    style="
+                      position: relative;
+                      padding-top: 177.78%;
+                      width: 100%;
+                    "
+                  >
+                    <iframe
+                      src="https://kinescope.io/embed/5LMWS2X3Aegk6JUzgbG1jc"
+                      allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                      frameborder="0"
+                      allowfullscreen
+                      style="
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                      "
+                    ></iframe>
+                  </div>
+                </div> -->
                 <div class="portfolio-item__image">
                   <div
                     style="
@@ -366,7 +440,9 @@
                       width: 100%;
                     "
                   >
-                  <div class="iframe-overlay"></div>
+                    <!-- Прозрачный слой, чтобы ловить wheel -->
+                    <div class="video-scroll-overlay"></div>
+
                     <iframe
                       src="https://kinescope.io/embed/5LMWS2X3Aegk6JUzgbG1jc"
                       allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
@@ -394,14 +470,13 @@
         <div class="glow-effect glow-effect--6"></div>
       </section>
 
-
       <section class="hero">
         <div class="container">
           <div class="hero__text-content">
             <h1 class="hero__title">
               Почему вы теряете деньги на маркетплейсах?
             </h1>
-            <p class="hero__subtitle">Расскажем подробнее про 32 причины</p>
+            <p class="hero__subtitle">Расскажем подробнее про 20 причин</p>
             <a href="https://t.me/fixitwhy_bot" target="_blank"
               ><button class="btn btn--primary width-fitcontent">
                 Узнать все
@@ -932,42 +1007,20 @@
     </div>
     <script>
       const slider = document.getElementById("portfolioSlider");
-      const overlays = slider.querySelectorAll(".iframe-overlay");
+      const overlays = document.querySelectorAll(".video-scroll-overlay");
 
-      let isDown = false;
-      let startX;
-      let scrollLeft;
-
-      slider.addEventListener("mousedown", (e) => {
-        isDown = true;
-        slider.classList.add("grabbing");
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-
-        // показать оверлеи (чтобы iframe не мешали)
-        overlays.forEach((el) => (el.style.display = "block"));
-      });
-
-      slider.addEventListener("mouseleave", () => {
-        isDown = false;
-        slider.classList.remove("grabbing");
-        overlays.forEach((el) => (el.style.display = "none"));
-      });
-
-      slider.addEventListener("mouseup", () => {
-        isDown = false;
-        slider.classList.remove("grabbing");
-        overlays.forEach((el) => (el.style.display = "none"));
-      });
-
-      slider.addEventListener("mousemove", (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 1.5;
-        slider.scrollLeft = scrollLeft - walk;
+      overlays.forEach((overlay) => {
+        overlay.addEventListener(
+          "wheel",
+          (evt) => {
+            evt.preventDefault();
+            slider.scrollLeft += evt.deltaY;
+          },
+          { passive: false }
+        );
       });
     </script>
+
     <script src="./js/common.js"></script>
   </body>
 </html>

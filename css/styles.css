@@ -1019,14 +1019,21 @@
 
 .portfolio__slider {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   overflow-x: auto;
-  padding: 10px 0;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
   scroll-snap-type: x mandatory;
-  cursor: grab;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
 }
+
+.video-scroll-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: transparent;
+}
+
 
 .portfolio__slider::-webkit-scrollbar {
   display: none;
@@ -1060,13 +1067,6 @@
   font-weight: 700;
   line-height: 24px;
   color: var(--text-color);
-}
-
-.iframe-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  display: none; /* по умолчанию скрыт */
 }
 
 .portfolio__header,
