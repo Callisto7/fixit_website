@@ -1032,6 +1032,7 @@
   inset: 0;
   z-index: 2;
   background: transparent;
+  pointer-events: none; 
 }
 
 
