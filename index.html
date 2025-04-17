@@ -1009,16 +1009,23 @@
       const slider = document.getElementById("portfolioSlider");
       const overlays = document.querySelectorAll(".video-scroll-overlay");
 
+      const handleWheel = (evt) => {
+        const canScroll = slider.scrollWidth > slider.clientWidth;
+        if (!canScroll) return; // Если нечего прокручивать — выходим
+
+        const isVerticalScroll = Math.abs(evt.deltaY) > Math.abs(evt.deltaX);
+        if (isVerticalScroll) {
+          evt.preventDefault(); // Блокируем прокрутку страницы
+          slider.scrollLeft += evt.deltaY;
+        }
+      };
+
+      // Вешаем обработчик и на overlay, и на сам slider
       overlays.forEach((overlay) => {
-        overlay.addEventListener(
-          "wheel",
-          (evt) => {
-            evt.preventDefault();
-            slider.scrollLeft += evt.deltaY;
-          },
-          { passive: false }
-        );
+        overlay.addEventListener("wheel", handleWheel, { passive: false });
       });
+
+      slider.addEventListener("wheel", handleWheel, { passive: false });
     </script>
 
     <script src="./js/common.js"></script>
