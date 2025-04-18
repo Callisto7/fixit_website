@@ -242,8 +242,6 @@
                       width: 100%;
                     "
                   >
-                    <!-- Прозрачный слой, чтобы ловить wheel -->
-                    <div class="video-scroll-overlay"></div>
 
                     <iframe
                       src="https://kinescope.io/embed/tEuVjiN2xtLXH7aniHozFG"
@@ -274,8 +272,6 @@
                       width: 100%;
                     "
                   >
-                    <!-- Прозрачный слой, чтобы ловить wheel -->
-                    <div class="video-scroll-overlay"></div>
 
                     <iframe
                       src="https://kinescope.io/embed/gwvsDQfvUNATuSFhwt7C1a"
@@ -307,9 +303,6 @@
                       width: 100%;
                     "
                   >
-                    <!-- Прозрачный слой, чтобы ловить wheel -->
-                    <div class="video-scroll-overlay"></div>
-
                     <iframe
                       src="https://kinescope.io/embed/piWT9qCCpDDxcbphRHq2CY"
                       allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
@@ -340,8 +333,6 @@
                       width: 100%;
                     "
                   >
-                    <!-- Прозрачный слой, чтобы ловить wheel -->
-                    <div class="video-scroll-overlay"></div>
 
                     <iframe
                       src="https://kinescope.io/embed/szb4J4zZaSvmnqDqGNCDYt"
@@ -371,8 +362,6 @@
                       width: 100%;
                     "
                   >
-                    <!-- Прозрачный слой, чтобы ловить wheel -->
-                    <div class="video-scroll-overlay"></div>
 
                     <iframe
                       src="https://kinescope.io/embed/5LMWS2X3Aegk6JUzgbG1jc"
@@ -396,7 +385,6 @@
               </div>
             </div>
           </div>
-          <div class="portfolio__dots" id="portfolioDots"></div>
         </div>
         <div class="glow-effect glow-effect--6"></div>
       </section>
@@ -935,30 +923,7 @@
           ><button class="btn btn--primary">Попробовать за 10₽</button></a
         >
       </div>
-    </div>
-    <script>
-      const slider = document.getElementById("portfolioSlider");
-      const overlays = document.querySelectorAll(".video-scroll-overlay");
-
-      const handleWheel = (evt) => {
-        const canScroll = slider.scrollWidth > slider.clientWidth;
-        if (!canScroll) return; // Если нечего прокручивать — выходим
-
-        const isVerticalScroll = Math.abs(evt.deltaY) > Math.abs(evt.deltaX);
-        if (isVerticalScroll) {
-          evt.preventDefault(); // Блокируем прокрутку страницы
-          slider.scrollLeft += evt.deltaY;
-        }
-      };
-
-      // Вешаем обработчик и на overlay, и на сам slider
-      overlays.forEach((overlay) => {
-        overlay.addEventListener("wheel", handleWheel, { passive: false });
-      });
-
-      slider.addEventListener("wheel", handleWheel, { passive: false });
-    </script>
-
+    </div>    
     <script src="./js/common.js"></script>
   </body>
 </html>
