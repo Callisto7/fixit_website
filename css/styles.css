@@ -788,7 +788,7 @@
   width: 727px;
   height: 486px;
   top: -55px;
-  right: 100px;
+  right: 120px;
   border-radius: 29.32px;
   position: absolute;
   overflow: hidden;
@@ -1025,6 +1025,13 @@
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 10px;
+
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE и Edge */
+}
+
+.portfolio__slider {
+  overflow-y: hidden;
 }
 
 .video-scroll-overlay {
@@ -1032,16 +1039,11 @@
   inset: 0;
   z-index: 2;
   background: transparent;
-  pointer-events: none; 
+  pointer-events: none;
 }
-
 
 .portfolio__slider::-webkit-scrollbar {
   display: none;
-}
-
-.portfolio__slider.grabbing {
-  cursor: grabbing;
 }
 
 .portfolio-item {
@@ -1349,6 +1351,15 @@
   .hero {
     padding: 56px 56px;
   }
+  .dashboard__image {
+    right: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .dashboard__image {
+    right: 350px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -1394,7 +1405,7 @@
     bottom: 0;
   }
   .iphone-frame {
-    top: 55px!important;
+    top: 55px !important;
   }
 }
 
@@ -1749,7 +1760,7 @@
   }
 
   .iphone-frame {
-    top: 55px!important;
+    top: 55px !important;
   }
 }
 
