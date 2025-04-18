@@ -759,7 +759,9 @@
 .dashboard__content {
   display: flex;
   align-items: center;
-  gap: 48px;
+  justify-content: space-between;
+  top: -135px;
+  position: relative;
 }
 
 .dashboard__text {
@@ -787,10 +789,7 @@
 .dashboard__image {
   width: 727px;
   height: 486px;
-  top: -55px;
-  right: 120px;
   border-radius: 29.32px;
-  position: absolute;
   overflow: hidden;
   background: linear-gradient(
     0deg,
@@ -800,7 +799,6 @@
 }
 
 .dashboard__img {
-  position: absolute;
   padding: 18px;
   object-fit: cover;
 }
@@ -1351,25 +1349,6 @@
   .hero {
     padding: 56px 56px;
   }
-  .dashboard__image {
-    right: 30px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .dashboard__image {
-    right: 350px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  /* Стили для средних планшетов */
-
-  .dashboard__image {
-    width: 400px;
-    height: 300px;
-    top: 35px;
-  }
 }
 
 @media (min-width: 1024px) and (max-width: 1199px) {
@@ -1388,10 +1367,6 @@
   }
   .hero__text-content {
     max-width: 300px;
-  }
-
-  .dashboard {
-    height: auto;
   }
   .dashboard__text {
     flex: 0 0 400px;
@@ -1921,12 +1896,17 @@
 @media (max-width: 768px) {
   .dashboard__image {
     height: auto;
+    position: absolute;
+    right: 0;
   }
   .overlap-hidden {
     max-height: 390px;
   }
   .iphone-frame {
     top: 55px;
+  }
+  .dashboard__content {
+    position: static;
   }
 }
 
@@ -1946,7 +1926,7 @@
 }
 
 /* Средние планшеты */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .div-2 {
     flex-direction: row;
   }
@@ -1956,6 +1936,11 @@
 
   .dashboard__image {
     height: 300px;
+    position: absolute;
+    right: 0;
+  }
+  .dashboard__content {
+    position: static;
   }
 
   .div-2 {
@@ -1975,6 +1960,14 @@
 
 /* Большие планшеты */
 @media (min-width: 992px) and (max-width: 1199px) {
+  .dashboard__content {
+    top: -100px;
+  }
+  .dashboard__image {
+    width: 600px;
+    height: 400px;
+
+  }
 }
 
 .fullscreen-play-button {
