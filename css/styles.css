@@ -1034,15 +1034,9 @@
 .portfolio__slider::-webkit-scrollbar {
   display: none;
 }
-#portfolioSlider {
-  cursor: grab;
-  scroll-behavior: smooth;
-}
-#portfolioSlider.active {
-  cursor: grabbing;
-}
+
 .portfolio-item {
-  flex: 0 0 240px;
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -1361,6 +1355,10 @@
 }
 
 @media (max-width: 992px) {
+
+  .portfolio-item {
+    flex: 0 0 240px;
+  }
   .modal {
     padding: 24px 16px !important;
     gap: 48px !important;
@@ -1883,6 +1881,10 @@
   }
   .dashboard__content {
     position: static;
+  }
+
+  .portfolio-item {
+    flex: 0 0 240px;
   }
 }
 
